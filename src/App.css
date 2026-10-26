@@ -1,0 +1,62 @@
+:root { --green:#2f5d3a; --dark:#1d3a26; --leaf:#7fb069; --cream:#f6f3ea; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Georgia, 'Times New Roman', serif; background: var(--cream); color:#22301f; }
+
+/* Landing page background image */
+.landing-page {
+  min-height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_1280.jpg');
+  background-size: cover; background-position: center;
+}
+.landing-overlay {
+  min-height: 100vh; background: rgba(15,35,20,.62); color:#fff;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; padding:24px;
+}
+.landing-content { text-align:center; }
+.landing-content h1 { font-size: clamp(2.5rem, 7vw, 5rem); margin:0; letter-spacing:.02em; }
+.tagline { font-size:1.3rem; margin:8px 0 24px; }
+.about-us { max-width:600px; text-align:center; line-height:1.7; font-size:1.05rem; }
+.get-started-button {
+  background: var(--leaf); color:#10240f; border:none; padding:12px 28px; font-size:1.05rem;
+  font-family:inherit; border-radius:6px; cursor:pointer;
+}
+.get-started-button:hover { background:#95c97e; }
+.get-started-button:focus-visible, .product-button:focus-visible, .cart-item-button:focus-visible { outline:3px solid #f2c14e; outline-offset:2px; }
+
+/* Navbar */
+.navbar { background:var(--dark); color:#fff; display:flex; justify-content:space-between; align-items:center; padding:12px 28px; position:sticky; top:0; z-index:5; }
+.navbar-brand { font-size:1.5rem; cursor:pointer; }
+.navbar-links { display:flex; align-items:center; gap:28px; }
+.navbar-links a { color:#fff; text-decoration:none; font-size:1.1rem; }
+.navbar-links a:hover { color:var(--leaf); }
+.cart-link { position:relative; display:inline-flex; }
+.cart-link svg { fill:#fff; }
+.cart_quantity_count { position:absolute; top:6px; left:0; right:0; text-align:center; font-size:.85rem; font-weight:bold; pointer-events:none; }
+
+/* Product list */
+.product-grid { max-width:1200px; margin:0 auto; padding:24px; }
+.category-title { border-bottom:2px solid var(--leaf); padding-bottom:6px; margin-top:36px; }
+.product-list { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:20px; }
+.product-card { background:#fff; border-radius:8px; padding:14px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.12); display:flex; flex-direction:column; }
+.product-image { width:100%; height:180px; object-fit:cover; border-radius:6px; }
+.product-title { margin:10px 0 4px; }
+.product-description { font-size:.9rem; margin:0 0 8px; flex:1; }
+.product-price { font-weight:bold; color:var(--green); margin-bottom:10px; }
+.product-button { background:var(--green); color:#fff; border:none; padding:10px; border-radius:6px; cursor:pointer; font-family:inherit; font-size:1rem; }
+.product-button:hover:not(:disabled) { background:var(--dark); }
+.product-button:disabled { background:#aab8a8; cursor:not-allowed; }
+
+/* Cart */
+.cart-container { max-width:800px; margin:0 auto; padding:24px; }
+.cart-total { margin:6px 0; }
+.cart-item { display:flex; gap:20px; background:#fff; border-radius:8px; padding:14px; margin:16px 0; box-shadow:0 1px 4px rgba(0,0,0,.12); }
+.cart-item-image { width:120px; height:120px; object-fit:cover; border-radius:6px; }
+.cart-item-details { display:flex; flex-direction:column; gap:6px; align-items:flex-start; }
+.cart-item-name { font-size:1.2rem; font-weight:bold; }
+.cart-item-quantity { display:flex; align-items:center; gap:10px; }
+.cart-item-button { width:32px; height:32px; border-radius:50%; border:1px solid var(--green); background:#fff; font-size:1.1rem; cursor:pointer; }
+.cart-item-button:hover { background:var(--leaf); }
+.cart-item-delete { background:#a63d2f; color:#fff; border:none; padding:6px 14px; border-radius:6px; cursor:pointer; font-family:inherit; }
+.cart-actions { display:flex; gap:16px; margin-top:24px; flex-wrap:wrap; }
+.checkout { background:var(--green); color:#fff; }
+@media (max-width:560px) { .cart-item { flex-direction:column; } .navbar { padding:10px 14px; } .navbar-links { gap:14px; } }
