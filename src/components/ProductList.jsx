@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from '../features/cart/CartSlice';
+import { addItem } from '../features/cart/CartSlice.jsx';
 import Navbar from './Navbar';
 
 const IMAGES = [

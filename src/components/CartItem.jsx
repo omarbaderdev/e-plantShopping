@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeItem, updateQuantity } from '../features/cart/CartSlice';
+import { removeItem, updateQuantity } from '../features/cart/CartSlice.jsx';
 import Navbar from './Navbar';
 
 function CartItem({ setPage }) {
