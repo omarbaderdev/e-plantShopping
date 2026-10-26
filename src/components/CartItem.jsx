@@ -54,7 +54,7 @@ function CartItem({ setPage }) {
 
         <div className="cart-actions">
           <button className="get-started-button" onClick={() => setPage('plants')}>Continue Shopping</button>
-          <button className="get-started-button checkout" onClick={handleCheckout}>Checkout</button>
+          <button className="get-started-button1" onClick={handleCheckout}>Checkout</button>
         </div>
       </div>
     </div>

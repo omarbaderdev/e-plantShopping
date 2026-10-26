@@ -1,4 +1,4 @@
-# Paradise Nursery
+# e-plantShopping - Paradise Nursery
 
 A React + Redux Toolkit shopping app for houseplants. Browse plants by category,
 add them to a cart, adjust quantities, and review the total cost.
@@ -19,8 +19,9 @@ npm run dev
 ```
 
 ## Deploy to GitHub Pages
-1. Set the production `base` in `vite.config.js` to your GitHub repository name
-   (for example, `/my-repository/`). Keep the trailing slash.
+1. Set the GitHub repository name to `e-plantShopping`. The production `base`
+   in `vite.config.js` and the `homepage` in `package.json` are configured for
+   `omarbaderdev/e-plantShopping`.
 2. Push the project to GitHub and run `npm run deploy`.
 3. In GitHub, open **Settings → Pages** and select the `gh-pages` branch.
 
